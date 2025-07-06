@@ -1,0 +1,44 @@
+{
+  "name": "restore",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "watch:tailwindcss": "npx tailwindcss -i src/index.css -o public/style.css --minify -w",
+    "build:tailwindcss": "npx tailwindcss -i src/index.css -o public/style.css --minify",
+    "dev": "vite",
+    "start": "concurrently --kill-others \"npm run dev\" \"npm run watch:tailwindcss\"",
+    "build": "tsc -b && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@material-tailwind/react": "^2.1.10",
+    "@tailwindcss/vite": "^4.1.11",
+    "@types/react-router-dom": "^5.3.3",
+    "concurrently": "^9.2.0",
+    "iconoir-react": "^7.11.0",
+    "motion": "^12.23.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^7.6.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.29.0",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@vitejs/plugin-react": "^4.5.2",
+    "auto-prefixer": "^0.4.2",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^9.29.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.20",
+    "globals": "^16.2.0",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.17",
+    "typescript": "~5.8.3",
+    "typescript-eslint": "^8.34.1",
+    "vite": "^7.0.0"
+  }
+}
