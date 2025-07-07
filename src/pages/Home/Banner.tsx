@@ -5,8 +5,8 @@ const Banner = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const backgroundImages = [
     "/images/Banner image.jpg",
-    "https://res.cloudinary.com/promotion-army/image/upload/v1653064116/cld-sample.jpg",
-    "/images/Banner image.jpg",
+    "/images/Banner image 2.jpg",
+    "/images/Banner image 3.jpg",
   ];
 
   useEffect(() => {

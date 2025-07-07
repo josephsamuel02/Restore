@@ -1,6 +1,10 @@
+import Footer from "../../components/Footer";
 import Nav from "../../components/Nav";
 import Banner from "./Banner";
 import Causes from "./Causes";
+import Events from "./Events";
+import Up_comingEvents from "./Up_comingEvents";
+import Video from "./Video";
 import WhatWeDo from "./What_we_do";
 
 const Home = () => {
@@ -10,10 +14,12 @@ const Home = () => {
       <Banner />
       <Causes />
       <WhatWeDo />
-      {/* <AboutUs /> */}
+      <Events />
+      <Video />
+      <Up_comingEvents />
       {/* <Faq /> */}
       {/* <ContactUs /> */}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
