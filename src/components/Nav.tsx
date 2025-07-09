@@ -15,7 +15,7 @@ const LINKS = [
     href: PUBLIC_ROUTES.ABOUT_US,
   },
   {
-    title: "Events",
+    title: "Outreach Events",
     href: PUBLIC_ROUTES.EVENTS,
   },
   {
@@ -59,7 +59,7 @@ const Nav = () => {
   }, []);
 
   return (
-    <Navbar className="mx-auto w-screen rounded-none bg-transparent" {...({} as any)}>
+    <Navbar className="mx-auto w-screen rounded-none z-10 bg-white shadow-md" {...({} as any)}>
       <div className="flex w-full items-center">
         <Typography
           as="a"
