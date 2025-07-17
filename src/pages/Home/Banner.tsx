@@ -36,14 +36,17 @@ const Banner = () => {
       {/* Banner Content */}
       <div className="relative flex flex-row z-10 w-full h-full p-0 bg-gradient-to-r from-black to-transparent">
         <div className="mx-1 pl-12 w-full md:w-3/5 pt-28 h-11/12 flex flex-col  ">
-          <h3 className="my-auto md:ml-10 text-[50px] text-white font-semibold font-Raleway">
+          <h3 className="my-auto md:ml-10 text-[40px] md:text-[50px] text-white font-semibold font-Raleway">
             Together, we restore lives.
           </h3>
-          <h3 className="m-0 ml-10 text-[20px] text-white font-Nunito">
+          <h3 className="my-auto m-0 md:ml-10 text-[20px] text-white font-Nunito">
             Building resilience among crisis-impacted believers.
           </h3>
-          <a className="m-3 w-[251px] h-[72px] py-5 text-white font-Poppins text-center shadow shadow-green-300 my-20 text-[20px] rounded backdrop-opacity-75 bg-[#165a08d7] hover:bg-[#347427d7] cursor-pointer">
-            Partner with us
+          <a
+            style={{ textDecoration: "none" }}
+            className="flex items-center m-3 w-[151px] h-[47px] md:w-[231px] md:h-[66px] md:py-5  text-white font-Railway text-[16px] md:text-[20px] text-center shadow   my-20  rounded backdrop-opacity-75 bg-[#165a08d7] hover:bg-[#347427d7] cursor-pointer"
+          >
+            <span className="mx-auto">Partner with us</span>
           </a>
         </div>
       </div>

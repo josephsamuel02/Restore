@@ -1,15 +1,15 @@
 const WhatWeDo = () => {
   return (
-    <div className="my-24 h-auto  w-full mx-auto  items-Center flex-col bg-White flex px-10 ">
+    <div className="my-24 h-auto  w-full   items-Center flex-col bg-White flex md:px-10 ">
       <h3 className="text-center text-3xl my-8 text-black">What we do</h3>
-      <div className="flex w-full h-auto md:w-4/5 m-auto py-10  md:px-10 items-Center flex-col md:flex-row bg-White rounded-xl shadow-xl">
+      <div className="flex w-full h-auto md:w-10/12 m-auto py-10  md:px-10 items-Center flex-col md:flex-row bg-White rounded-xl shadow-xl">
         <img
           src="./images/Main restore logo.jpg"
           alt=""
-          className=" flex mx-auto  w-42 h-20 m-4 mb-14"
+          className=" flex mx-auto  w-36 h-14 m-4 mb-14"
         />
-        <div className="w-auto h-auto mx-auto items-Center flex-col bg-White flex px-10 ">
-          <p className="text-base md:text-lg text-center mb-8 text-gray-700">
+        <div className="w-auto h-auto m-auto items-Center flex-row bg-White flex px-10 ">
+          <p className="text-sm md:text-sm mb-8 text-gray-800">
             The place is close to Barceloneta Beach and bus stop just 2 min by walk and near to
             "Naviglio" where you can enjoy the main night life in Barcelona. We are a
             non-profit organization dedicated to making a positive impact in our community. Our

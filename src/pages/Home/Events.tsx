@@ -1,4 +1,5 @@
 import Masonry from "react-masonry-css";
+import PUBLIC_ROUTES from "../../utils/PublicRoutes";
 
 const Events = () => {
   const events = [
@@ -62,9 +63,11 @@ const Events = () => {
         </Masonry>
       </div>
 
-      <button className="w-72 h-auto text-xl py-3 px-6 bg-green-800 hover:bg-green-600 text-white font-Raleway rounded-md">
-        More..
-      </button>
+      <a href={PUBLIC_ROUTES.EVENTS}>
+        <button className="w-72 h-auto text-xl py-3 px-6 bg-green-800 hover:bg-green-600 text-white font-Raleway rounded-md">
+          More..
+        </button>
+      </a>
     </div>
   );
 };

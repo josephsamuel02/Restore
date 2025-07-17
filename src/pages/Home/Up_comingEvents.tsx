@@ -1,4 +1,5 @@
 import Masonry from "react-masonry-css";
+import PUBLIC_ROUTES from "../../utils/PublicRoutes";
 
 const Up_comingEvents = () => {
   const events = [
@@ -13,19 +14,6 @@ const Up_comingEvents = () => {
       date: "April 20, 2024",
       description: "Attend our annual fundraising gala to support our ongoing projects.",
       image: "/images/event2.jpg",
-    },
-    {
-      title: "Volunteer Training",
-      date: "May 10, 2024",
-      description:
-        "Training session for new volunteers to learn about our mission and activities.",
-      image: "/images/event3.jpg",
-    },
-    {
-      title: "Community Cleanup",
-      date: "March 15, 2024",
-      description: "Join us for a community cleanup event to beautify our local parks.",
-      image: "/images/event1.jpg",
     },
   ];
   const breakpointColumns = {
@@ -61,6 +49,11 @@ const Up_comingEvents = () => {
           ))}
         </Masonry>
       </div>
+      <a href={PUBLIC_ROUTES.EVENTS}>
+        <button className="w-72 h-auto text-xl py-3 px-6 bg-green-800 hover:bg-green-600 text-white font-Raleway rounded-md">
+          More..
+        </button>
+      </a>
     </div>
   );
 };
