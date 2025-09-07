@@ -63,12 +63,12 @@ const Nav = () => {
       <div className="flex w-full items-center">
         <Typography
           as="a"
-          href="#"
+          href="/"
           type="small"
           className="mx-2 block py-1 font-semibold"
           {...({} as any)}
         >
-          <img src="./images/Main restore logo.jpg" alt="" className="w-52 h-16" />
+          <img src="./images/Logo.jpg" alt="" className="w-52 h-16" />
         </Typography>
         <div className="hidden lg:ml-auto lg:mr-2 lg:block">
           <NavList />

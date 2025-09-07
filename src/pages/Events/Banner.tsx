@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 
 const Banner = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const backgroundImages = ["/images/Banner image 3.jpg"];
+  const backgroundImages = ["/images/18.jpg", "/images/2.jpg", "/images/5.jpg"];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -31,9 +31,9 @@ const Banner = () => {
 
       {/* Banner Content */}
       <div className="relative flex flex-row z-10 w-full h-full p-0 bg-gradient-to-r from-black to-transparent">
-        <div className="mx-1 pl-12 w-full md:w-4/5 pt-20 h-11/12 flex flex-col  ">
-          <h3 className="my-auto md:ml-10 text-[70px] text-white font-semibold font-Raleway">
-            See All Our Outreach Events
+        <div className="mx-1 pl-7 w-full md:w-4/5 pt-20 h-11/12 flex flex-col  ">
+          <h3 className="my-auto ml-2 md:ml-10 text-[50px] md:text-6xl text-white font-semibold font-Raleway">
+            Our Outreach Events
           </h3>
         </div>
       </div>

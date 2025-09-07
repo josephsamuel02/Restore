@@ -4,29 +4,16 @@ import PUBLIC_ROUTES from "../../utils/PublicRoutes";
 const Events = () => {
   const events = [
     {
-      title: "Community Cleanup",
+      title: "Community Empowerment",
       date: "March 15, 2024",
       description: "Join us for a community cleanup event to beautify our local parks.",
-      image: "/images/event1.jpg",
+      image: "/images/15.jpg",
     },
     {
-      title: "Fundraising Gala",
-      date: "April 20, 2024",
+      title: "Jos Outrech",
+      date: "july, 2025",
       description: "Attend our annual fundraising gala to support our ongoing projects.",
-      image: "/images/event2.jpg",
-    },
-    {
-      title: "Volunteer Training",
-      date: "May 10, 2024",
-      description:
-        "Training session for new volunteers to learn about our mission and activities.",
-      image: "/images/event3.jpg",
-    },
-    {
-      title: "Community Cleanup",
-      date: "March 15, 2024",
-      description: "Join us for a community cleanup event to beautify our local parks.",
-      image: "/images/event1.jpg",
+      image: "/images/20.jpg",
     },
   ];
   const breakpointColumns = {

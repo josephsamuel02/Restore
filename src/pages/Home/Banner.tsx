@@ -4,9 +4,15 @@ import { useEffect, useState } from "react";
 const Banner = () => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const backgroundImages = [
+    "/images/2.jpg",
+    "/images/11.jpg",
+    "/images/12.jpg",
     "/images/Banner image.jpg",
     "/images/Banner image 2.jpg",
     "/images/Banner image 3.jpg",
+    "/images/2.jpg",
+    "/images/11.jpg",
+    "/images/12.jpg",
   ];
 
   useEffect(() => {

@@ -1,43 +1,31 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Typography, IconButton } from "@material-tailwind/react";
 import { Facebook, Instagram, X } from "iconoir-react";
+import PUBLIC_ROUTES from "../utils/PublicRoutes";
 
 const LINKS = [
   {
-    title: "Product",
-    items: [
-      {
-        title: "Overview",
-        href: "#",
-      },
-      {
-        title: "Features",
-        href: "#",
-      },
-    ],
-  },
-  {
-    title: "Company",
+    title: "Organization",
     items: [
       {
         title: "About us",
-        href: "#",
+        href: PUBLIC_ROUTES.ABOUT_US,
       },
       {
-        title: "Careers",
-        href: "#",
+        title: "Outreaches",
+        href: PUBLIC_ROUTES.EVENTS,
       },
     ],
   },
   {
-    title: "Resource",
+    title: "Contact",
     items: [
       {
-        title: "Blog",
-        href: "#",
+        title: "contacts",
+        href: "/contact",
       },
       {
-        title: "Newsletter",
+        title: "Schedule a call",
         href: "#",
       },
     ],
