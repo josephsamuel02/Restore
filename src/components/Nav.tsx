@@ -42,7 +42,7 @@ const NavList = () => {
       <Button
         as="a"
         size="sm"
-        className="flex md:hidden font-Raleway bg-green-800 text-white text-center hover:bg-green-900 lg:ml-auto lg:inline-block rounded capitalize"
+        className="flex md:hidden font-Raleway bg-primary text-white text-center hover:bg-hover lg:ml-auto lg:inline-block rounded capitalize"
         {...({} as any)}
       >
         Donate
@@ -68,7 +68,7 @@ const Nav = () => {
           className="mx-2 block py-1 font-semibold"
           {...({} as any)}
         >
-          <img src="./images/Logo.jpg" alt="" className="w-52 h-16" />
+          <img src="./images/Logo.jpg" alt="logo" className="w-44 h-20" />
         </Typography>
         <div className="hidden lg:ml-auto lg:mr-2 lg:block">
           <NavList />

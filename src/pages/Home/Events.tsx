@@ -4,15 +4,10 @@ import PUBLIC_ROUTES from "../../utils/PublicRoutes";
 const Events = () => {
   const events = [
     {
-      title: "Community Empowerment",
-      date: "March 15, 2024",
-      description: "Join us for a community cleanup event to beautify our local parks.",
-      image: "/images/15.jpg",
-    },
-    {
-      title: "Jos Outrech",
-      date: "july, 2025",
-      description: "Attend our annual fundraising gala to support our ongoing projects.",
+      title: "Outreach to Bassa (Plateau State)",
+      // date: "January 1, 2025",
+      description:
+        "We were able to positively impact the lives of approximately 1,000 community members in various ways",
       image: "/images/20.jpg",
     },
   ];
@@ -42,8 +37,8 @@ const Events = () => {
                 alt={event.title}
                 className="w-62 h-40 object-cover rounded-t-lg mb-4"
               />
-              <h4 className="text-xl text-green-900 font-semibold mb-2">{event.title}</h4>
-              <p className="text-sm text-gray-600 mb-2">{event.date}</p>
+              <h4 className="text-xl text-primary font-semibold mb-2">{event.title}</h4>
+              {/* <p className="text-sm text-gray-600 mb-2">{event.date}</p> */}
               <p className="text-sm text-gray-700">{event.description}</p>
             </div>
           ))}
@@ -51,7 +46,7 @@ const Events = () => {
       </div>
 
       <a href={PUBLIC_ROUTES.EVENTS}>
-        <button className="w-72 h-auto text-xl py-3 px-6 bg-green-800 hover:bg-green-600 text-white font-Raleway rounded-md">
+        <button className="w-72 h-auto text-xl py-3 px-6 bg-primary hover:bg-hover text-white font-Raleway rounded-md">
           More..
         </button>
       </a>

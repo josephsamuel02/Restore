@@ -50,7 +50,7 @@ const Banner = () => {
           </h3>
           <a
             style={{ textDecoration: "none" }}
-            className="flex items-center m-3 w-[151px] h-[47px] md:w-[231px] md:h-[66px] md:py-5  text-white font-Railway text-[16px] md:text-[20px] text-center shadow   my-20  rounded backdrop-opacity-75 bg-[#165a08d7] hover:bg-[#347427d7] cursor-pointer"
+            className="flex items-center m-3 w-[151px] h-[47px] md:w-[231px] md:h-[66px] md:py-5  text-white font-Railway text-[16px] md:text-[20px] text-center shadow   my-20  rounded backdrop-opacity-75 bg-primary hover:bg-hover cursor-pointer"
           >
             <span className="mx-auto">Partner with us</span>
           </a>

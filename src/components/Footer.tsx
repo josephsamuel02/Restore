@@ -37,14 +37,9 @@ const YEAR = new Date().getFullYear();
 const Footer = () => {
   return (
     <footer className="relative w-full">
-      <div className="mx-auto w-full max-w-7xl px-8">
+      <div className="mx-auto w-full max-w-7xl px-8 mt-24">
         <div className="grid grid-cols-1 justify-between gap-4 md:grid-cols-2">
-          <img
-            src="./images/Main restore logo.jpg"
-            alt=""
-            className="hidden md:flex w-42 h-20 m-4"
-          />
-
+          <img src="./images/Logo.jpg" alt="" className="hidden md:flex w-72 h-36 m-4" />
           <div className="grid grid-cols-3 justify-between gap-x-6 gap-y-4">
             {LINKS.map(({ title, items }) => (
               <ul key={title}>

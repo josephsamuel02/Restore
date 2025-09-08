@@ -37,7 +37,7 @@ const WhatWeDo = () => {
   return (
     <div
       ref={ref}
-      className={`my-24 w-full items-center flex-col bg-white flex md:px-10 transition-transform transition-opacity duration-700 ease-out transform
+      className={`my-24 w-full items-center flex-col bg-white flex md:px-10 transition-transform   duration-700 ease-out transform
         ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
       `}
     >
@@ -45,12 +45,12 @@ const WhatWeDo = () => {
 
       <div className="flex w-full h-auto md:w-10/12 m-auto py-10 md:px-10 items-center flex-col md:flex-row bg-white rounded-xl shadow-xl">
         <img
-          src="./images/Main restore logo.jpg"
+          src="./images/Logo.jpg"
           alt="Main restore logo"
-          className="flex mx-auto w-36 h-14 m-4 mb-14"
+          className="flex mx-auto w-72 h-32 m-4 mb-14"
         />
         <div className="w-auto h-auto m-auto items-center flex-row bg-white flex px-10 ">
-          <p className="text-sm md:text-lg mb-8 text-gray-800">
+          <p className="text-md md:text-lg mb-8 text-gray-800">
             To provide holistic support, empowerment, and training to crisis-affected
             communities, fostering spiritual growth, skill development, and resilience, as we
             work together to restore hope, dignity, and purpose in the lives of those we serve.

@@ -25,7 +25,10 @@ export default withMT({
         // "chat-background": "url('/images/Frame 1954.svg')",
         // "footer-background": "url('/images/footer bg1.svg')",
       },
-      colors: {},
+      colors: {
+        primary: "#F17125",
+        hover: "#e65603",
+      },
     },
     colors: {
       customOrange: "#F25B38",
