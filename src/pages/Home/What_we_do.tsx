@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const WhatWeDo = () => {
   const ref = useRef(null);
@@ -8,7 +8,10 @@ const WhatWeDo = () => {
     if (!ref.current) return;
 
     // Respect user's reduced motion preference
-    const prefersReduced = typeof window !== "undefined" && window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const prefersReduced =
+      typeof window !== "undefined" &&
+      window.matchMedia &&
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     if (prefersReduced) {
       setIsVisible(true);
       return;
