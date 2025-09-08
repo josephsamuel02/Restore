@@ -81,7 +81,7 @@ const AllEvents: React.FC = () => {
             src={isVisible ? active : ""}
             alt="active event"
             onClick={() => setShowLightbox(true)}
-            className="w-full h-[420px] md:h-[520px] object-cover rounded-lg shadow-md cursor-pointer"
+            className="w-full h-auto md:h-[520px] object-cover rounded-lg shadow-md cursor-pointer"
           />
         </div>
 
