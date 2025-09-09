@@ -175,7 +175,7 @@ const AboutUs = () => {
                 <strong>Contact:</strong> +2348145517222, +2349042614572
               </p>
               <p>
-                <strong>Email:</strong> afangsamue@gmail.com
+                <strong>Email:</strong> afangsamuel@gmail.com
               </p>
             </div>
           </div>

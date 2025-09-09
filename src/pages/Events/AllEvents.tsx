@@ -15,7 +15,7 @@ const AllEvents: React.FC = () => {
 
   const imgRef = useRef<HTMLImageElement | null>(null);
 
-  const eventDate = "January 1, 2023";
+  const eventDate = "June 30, 2025";
   const eventLocation = "Bassa, Plateau State, Nigeria";
 
   const upcomingEvent = {

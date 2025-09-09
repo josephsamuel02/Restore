@@ -18,7 +18,7 @@ const causes = [
   {
     title: "Discipleship Growth Program (DGP)",
     text: "Nurturing the spiritual growth and development of crisis-affected individuals through Bible-based discipleship, prayer, and mentorship.",
-    image: "images/33.jpg",
+    image: "images/42.jpg",
   },
   {
     title: "Skill Acquisition Program",
