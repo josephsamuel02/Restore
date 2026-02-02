@@ -159,10 +159,11 @@ const Up_comingEvents = () => {
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-semibold text-gray-800">Samuel Afang</h3>
             <p className="text-gray-600 mb-4">Founder / Director</p>
-            <p className="text-gray-700 max-w-lg leading-relaxed mb-6">
-              Samuel Afang founded Noach Helping Hands Foundation out of a deep conviction to
-              bring hope, empowerment, and spiritual growth to crisis-affected communities. His
-              passion for service continues to drive the mission of the foundation.
+            <p className="text-gray-800 max-w-lg leading-relaxed mb-6">
+              Samuel Afang is a missionary whose deep conviction to bring hope, support,
+              empowerment, and spiritual growth to crisis-affected communities lead him to
+              found Noach Helping Hands Foundation. His passion for service continues to drive
+              the mission of the foundation.
             </p>
             <div className="space-y-2 text-gray-700">
               <p>

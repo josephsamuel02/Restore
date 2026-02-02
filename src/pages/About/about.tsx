@@ -127,18 +127,86 @@ const AboutUs = () => {
         <h2 className="text-2xl md:text-3xl font-semibold text-center text-gray-900 mb-8">
           What We Do
         </h2>
-        <div className="max-w-4xl mx-auto space-y-4 text-center">
+
+        <div className="max-w-4xl mx-auto space-y-6 text-left">
+          <h3 className="text-xl font-semibold text-gray-900">Our Mission</h3>
           <p className="text-gray-700 text-lg leading-relaxed">
-            We provide practical and spiritual support to individuals and families affected by
-            crises. Through compassion and dedication, we focus on restoring dignity and hope.
+            We serve Christians and communities who have been deeply affected by violence,
+            displacement, and crisis. Our heart is to walk with people as they heal from
+            trauma, rebuild their lives, and rediscover hope through faith, compassion, and
+            practical support. We respond to urgent needs while helping individuals and
+            families regain stability, dignity, and purpose.
           </p>
-          <ul className="list-disc text-left list-inside text-gray-700 text-lg">
+
+          <hr className="border-gray-200" />
+
+          <h4 className="text-lg font-semibold mt-4">
+            Trauma Healing and Discipleship Growth
+          </h4>
+          <p className="text-gray-700 mt-2">
+            At the center of our work is the belief that healing is both spiritual and
+            emotional. Many believers carry deep wounds from loss, fear, and displacement.
+            Through our Trauma Healing and Discipleship Growth program, we create safe spaces
+            where people can process their pain in the light of Scripture and experience
+            restoration through Christ. We lead trauma healing sessions grounded in biblical
+            truth, provide group and personal counseling, and equip church leaders and
+            caregivers with the tools to support ongoing care.
+          </p>
+
+          <hr className="border-gray-200" />
+
+          <h4 className="text-lg font-semibold mt-4">Compassion and Community Outreach</h4>
+          <p className="text-gray-700 mt-2">
+            We go directly to where the need is greatest, meeting people in moments of
+            vulnerability with love and practical care. Our outreach includes:
+          </p>
+          <ul className="list-disc list-inside ml-6 mt-2 text-gray-700 space-y-1">
             <li>
-              <strong className="text-gray-900">Feeding:</strong> Providing emergency food
-              assistance to individuals and families in crisis, ensuring they have access to
-              nutritious food and can focus on rebuilding their lives.
+              Village and IDP (Internally Displaced Persons) outreach : Food, clothing, and
+              relief
+            </li>
+            <li>
+              Orphanage support : Food, toiletries, clothing, educational materials, and
+              consistent care
+            </li>
+            <li>Prison outreach : Prayer, counseling, and discipleship</li>
+            <li>
+              Hospital outreach : Assistance with bills, prescriptions, and comfort when
+              possible
             </li>
           </ul>
+
+          <hr className="border-gray-200" />
+
+          <h4 className="text-lg font-semibold mt-4">Empowerment and Livelihood Support</h4>
+          <p className="text-gray-700 mt-2">
+            We offer skills training, small-business support, and basic financial guidance to
+            help widows and young people start sustainable livelihoods. We also provide
+            mentorship so beneficiaries can grow in confidence and independence rather than
+            remain dependent on short-term aid.
+          </p>
+
+          <hr className="border-gray-200" />
+
+          <h4 className="text-lg font-semibold mt-4">
+            Education Support for Vulnerable Children
+          </h4>
+          <p className="text-gray-700 mt-2">
+            We support children from vulnerable families by helping cover school fees,
+            uniforms, textbooks, and learning materials when possible. Beyond academics, we
+            provide guidance and moral support to help children heal from trauma and believe in
+            a better tomorrow.
+          </p>
+
+          <hr className="border-gray-200" />
+
+          <h4 className="text-lg font-semibold mt-4">Strengthening Local Communities</h4>
+          <p className="text-gray-700 mt-2">
+            Lasting change happens when communities are empowered. We train local church
+            leaders and community members in trauma care, discipleship, and compassionate
+            response, and we work with trusted partners to ensure accountability and cultural
+            understanding so local care continues long-term.
+          </p>
         </div>
       </motion.section>
 
@@ -165,10 +233,11 @@ const AboutUs = () => {
           <div className="text-center md:text-left">
             <h3 className="text-2xl font-semibold text-gray-800">Samuel Afang</h3>
             <p className="text-gray-600 mb-4">Founder / Director</p>
-            <p className="text-gray-700 max-w-lg leading-relaxed mb-6">
-              Samuel Afang founded Noach Helping Hands Foundation out of a deep conviction to
-              bring hope, empowerment, and spiritual growth to crisis-affected communities. His
-              passion for service continues to drive the mission of the foundation.
+            <p className="text-gray-800 max-w-lg leading-relaxed mb-6">
+              Samuel Afang is a missionary whose deep conviction to bring hope, support,
+              empowerment, and spiritual growth to crisis-affected communities lead him to
+              found Noach Helping Hands Foundation. His passion for service continues to drive
+              the mission of the foundation.
             </p>
             <div className="space-y-2 text-gray-700">
               <p>

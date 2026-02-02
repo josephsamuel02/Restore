@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import * as React from "react";
-import { Typography, Collapse, Navbar, Button } from "@material-tailwind/react";
+import { Typography, Collapse, Navbar } from "@material-tailwind/react";
 import PUBLIC_ROUTES from "../utils/PublicRoutes";
 import { CgMenu } from "react-icons/cg";
 import { MdOutlineClose } from "react-icons/md";
@@ -39,14 +39,14 @@ const NavList = () => {
           </Typography>
         </li>
       ))}
-      <Button
+      {/* <Button
         as="a"
         size="sm"
         className="flex md:hidden font-Raleway bg-primary text-white text-center hover:bg-hover lg:ml-auto lg:inline-block rounded capitalize"
         {...({} as any)}
       >
         Donate
-      </Button>
+      </Button> */}
     </ul>
   );
 };
