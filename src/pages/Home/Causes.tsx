@@ -10,13 +10,13 @@ const causes = [
   },
 
   {
-    title: "Feeding & Healthcare",
-    text: "Providing emergency food assistance and medical care and treatment through our network of volunteer nurses and doctors to individuals and families in crisis, ensuring they have access to nutritious food and healthcare.",
+    title: "Medical Care",
+    text: "We provide medical support to those affected by crisis, helping with hospital bills, prescriptions, and essential care. Our commitment is to ensure that vulnerable individuals and families receive the treatment and comfort they need during difficult times.d families in crisis, ensuring they have access to nutritious food and healthcare.",
     image: "images/12.jpg",
   },
 
   {
-    title: "Discipleship Growth Program (DGP)",
+    title: "Trauma healing Discipleship  Growth Program",
     text: "Nurturing the spiritual growth and development of crisis-affected individuals through Bible-based discipleship, prayer, and mentorship.",
     image: "images/new image.jpeg",
   },

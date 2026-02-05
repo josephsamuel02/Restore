@@ -6,7 +6,6 @@ import Events from "./Events";
 import Up_comingEvents from "./Up_comingEvents";
 // import Video from "./Video";
 import WhatWeDo from "./What_we_do";
-import MedicalCare from "./MedicalCare";
 
 const Home = () => {
   return (
@@ -15,7 +14,6 @@ const Home = () => {
       <Banner />
       <Causes />
       <WhatWeDo />
-      <MedicalCare />
       <Events />
       {/* <Video /> */}
       <Up_comingEvents />

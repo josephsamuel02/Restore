@@ -13,6 +13,8 @@ const Banner = () => {
     "/images/2.jpg",
     "/images/11.jpg",
     "/images/12.jpg",
+    "/images/n1 (1).jpg",
+    "/images/n2 (2).jpg"
   ];
 
   useEffect(() => {
