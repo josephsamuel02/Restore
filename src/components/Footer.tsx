@@ -64,7 +64,8 @@ const Footer = () => {
         </div>
         <div className="mt-10 flex w-full flex-col items-center justify-center gap-4 border-t border-surface py-4 md:flex-row md:justify-between">
           <Typography type="small" className="text-center" {...({} as any)}>
-            &copy; {YEAR} <a href="https://material-tailwind.com/">Restore Centre</a>. All
+            &copy; {YEAR}{" "}
+            <a href="https://material-tailwind.com/">Noach Helping Hands Foundation</a>. All
             Rights Reserved.
           </Typography>
           <div className="flex gap-1 sm:justify-center">

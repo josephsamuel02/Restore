@@ -43,10 +43,10 @@ const Banner = () => {
       <div className="relative flex flex-row z-10 w-full h-full p-0 bg-gradient-to-r from-black to-transparent">
         <div className="mx-1 pl-12 w-full md:w-3/5 pt-28 h-11/12 flex flex-col  ">
           <h3 className="my-auto md:ml-10 text-[40px] md:text-[50px] text-white font-semibold font-Raleway">
-            Together, we restore lives.
+            Restoring hope amongst the persecuted.{" "}
           </h3>
           <h3 className="my-auto m-0 md:ml-10 text-[20px] text-white font-Nunito">
-            Building resilience among crisis-impacted believers.
+            Building resilience among crisis-impacted communities.
           </h3>
           <a
             style={{ textDecoration: "none" }}

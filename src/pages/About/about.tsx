@@ -38,17 +38,22 @@ const AboutUs = () => {
           alt="About Us Banner"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            {...({} as any)}
-            className="text-white text-3xl md:text-5xl font-bold text-center"
-          >
-            <span className=" flex justify-start text-md pb-10">About Us </span> <br />
-            Noach Helping Hands Foundation
-          </motion.h1>
+        <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent flex items-center">
+          <div className="max-w-5xl mx-auto px-6 py-12 w-full">
+            <motion.h1
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              {...({} as any)}
+              className="text-white text-3xl md:text-5xl font-bold text-center md:text-left"
+            >
+              <span className="inline-block text-sm md:text-base uppercase tracking-wide text-white/80">
+                About Us
+              </span>
+              <br />
+              Noach Helping Hands Foundation
+            </motion.h1>
+          </div>
         </div>
       </div>
 
@@ -64,10 +69,9 @@ const AboutUs = () => {
           Mission Statement
         </h2>
         <p className="text-lg text-gray-700 leading-relaxed">
-          To provide holistic support, empowerment, and training to crisis-affected Christians
-          in Nigerian communities, fostering spiritual growth, skill development, and
-          resilience, as we work together to restore hope, dignity, and purpose in the lives of
-          those we serve.
+          To provide holistic support, empowerment, and training to crisis-affected
+          communities, fostering growth, skill development, and resilience, as we work together
+          to restore hope, dignity, and purpose in the lives of those we serve.
         </p>
       </motion.section>
 
@@ -110,9 +114,9 @@ const AboutUs = () => {
         <h2 className="text-2xl md:text-3xl font-semibold mb-4 text-gray-900">About Us</h2>
         <p className="text-lg text-gray-700 leading-relaxed">
           At <strong>Noach Helping Hands Foundation</strong>, we are dedicated to serving
-          crisis-affected Christians in Nigerian communities. Our mission is to provide
-          holistic support, empowerment, and training to help individuals and communities
-          rebuild their lives, grow in faith, and thrive.
+          crisis-affected communities. Our mission is to provide holistic support, empowerment,
+          and training to help individuals and communities rebuild their lives, grow, and
+          thrive.
         </p>
       </motion.section>
 
@@ -131,11 +135,11 @@ const AboutUs = () => {
         <div className="max-w-4xl mx-auto space-y-6 text-left">
           <h3 className="text-xl font-semibold text-gray-900">Our Mission</h3>
           <p className="text-gray-700 text-lg leading-relaxed">
-            We serve Christians and communities who have been deeply affected by violence,
-            displacement, and crisis. Our heart is to walk with people as they heal from
-            trauma, rebuild their lives, and rediscover hope through faith, compassion, and
-            practical support. We respond to urgent needs while helping individuals and
-            families regain stability, dignity, and purpose.
+            We serve communities who have been deeply affected by violence, displacement, and
+            crisis. Our heart is to walk with people as they heal from trauma, rebuild their
+            lives, and rediscover hope through faith, compassion, and practical support. We
+            respond to urgent needs while helping individuals and families regain stability,
+            dignity, and purpose.
           </p>
 
           <hr className="border-gray-200" />
@@ -145,12 +149,12 @@ const AboutUs = () => {
           </h4>
           <p className="text-gray-700 mt-2">
             At the center of our work is the belief that healing is both spiritual and
-            emotional. Many believers carry deep wounds from loss, fear, and displacement.
-            Through our Trauma Healing and Discipleship Growth program, we create safe spaces
-            where people can process their pain in the light of Scripture and experience
-            restoration through Christ. We lead trauma healing sessions grounded in biblical
-            truth, provide group and personal counseling, and equip church leaders and
-            caregivers with the tools to support ongoing care.
+            emotional. Many carry deep wounds from loss, fear, and displacement. Through our
+            Trauma Healing and Discipleship Growth program, we create safe spaces where people
+            can process their pain in the light of Scripture and experience restoration through
+            Christ. We lead trauma healing sessions grounded in biblical truth, provide group
+            and personal counseling, and equip church leaders and caregivers with the tools to
+            support ongoing care.
           </p>
 
           <hr className="border-gray-200" />

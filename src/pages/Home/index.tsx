@@ -4,8 +4,9 @@ import Banner from "./Banner";
 import Causes from "./Causes";
 import Events from "./Events";
 import Up_comingEvents from "./Up_comingEvents";
-import Video from "./Video";
+// import Video from "./Video";
 import WhatWeDo from "./What_we_do";
+import MedicalCare from "./MedicalCare";
 
 const Home = () => {
   return (
@@ -14,8 +15,9 @@ const Home = () => {
       <Banner />
       <Causes />
       <WhatWeDo />
+      <MedicalCare />
       <Events />
-      <Video />
+      {/* <Video /> */}
       <Up_comingEvents />
       {/* <Faq /> */}
       {/* <ContactUs /> */}

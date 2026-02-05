@@ -25,13 +25,6 @@ const Up_comingEvents = () => {
     },
   ];
 
-  const breakpointColumns = {
-    default: 4,
-    1100: 3,
-    768: 1,
-    480: 1,
-  };
-
   const handleCopy = (text: string, type: string) => {
     navigator.clipboard.writeText(text);
     setCopied(type);
@@ -40,138 +33,207 @@ const Up_comingEvents = () => {
 
   return (
     <>
-      <div className="w-full h-auto bg-white flex flex-col items-center py-10">
-        <h3 className="text-center text-3xl font-bold my-1 text-black">Upcoming Events</h3>
+      <div className="w-full h-auto bg-white flex flex-col items-center py-12 md:py-20">
+        <h3 className="text-center text-3xl md:text-4xl font-bold mb-10 text-primary">Upcoming Events</h3>
+        <br />        <br />
 
-        {/* Event Grid */}
-        <div className="flex items-center w-full h-auto py-16 px-6 bg-white">
-          <Masonry
-            breakpointCols={breakpointColumns}
-            className="flex w-full mx-auto items-center justify-center"
-          >
-            {events.map((event, index) => (
-              <div
-                key={index}
-                className=" flex flex-col mx-3 p-3 my-6 bg-white rounded-xl border shadow-md hover:shadow-xl cursor-pointer transform transition-transform duration-300 hover:scale-105"
-                onClick={() => setSelectedEvent(event)}
-              >
+        {/* Event List */}
+        <div className="w-full px-6 flex flex-col items-center space-y-8">
+          {events.map((event, index) => (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              key={index}
+              className="group w-full max-w-6xl bg-white rounded-2xl shadow-lg hover:shadow-2xl border border-gray-100 overflow-hidden flex flex-col md:flex-row cursor-pointer transition-all duration-300"
+              onClick={() => setSelectedEvent(event)}
+            >
+              {/* Image Section */}
+              <div className="w-full md:w-1/2 h-64 md:h-auto overflow-hidden relative">
                 <img
                   src={event.image}
                   alt={event.title}
-                  className="w-full h-48 object-cover rounded-lg mb-4"
+                  className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
                 />
-                <h4 className="text-xl font-semibold mb-1">{event.title}</h4>
-                <p className="text-sm text-gray-600">{event.date}</p>
-                <p className="text-sm text-gray-500 italic mb-2">{event.location}</p>
-                <p className="text-sm text-gray-700 line-clamp-3">{event.description}</p>
-                <button className="mt-4 bg-primary hover:bg-hover text-white py-2 px-4 rounded-lg font-medium transition">
-                  Support
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent md:bg-gradient-to-r md:from-transparent md:to-transparent opacity-80 md:opacity-0 transition-opacity" />
+              </div>
+
+              {/* Content Section */}
+              <div className="w-full md:w-1/2 p-6 md:p-10 flex flex-col justify-center">
+                <div className="flex items-center space-x-2 text-sm text-primary font-semibold mb-2">
+                  <span className="bg-primary/10 px-3 py-1 rounded-full uppercase tracking-wider">{event.date}</span>
+                </div>
+
+                <h4 className="text-2xl md:text-3xl font-bold mb-3 text-gray-900 group-hover:text-primary transition-colors">
+                  {event.title}
+                </h4>
+
+                <p className="text-base text-gray-500 italic mb-4 flex items-center">
+                  <span className="mr-2">📍</span> {event.location}
+                </p>
+
+                <p className="text-gray-700 text-lg leading-relaxed mb-6 line-clamp-3 md:line-clamp-none">
+                  {event.description}
+                </p>
+
+                <button className="self-start bg-primary hover:bg-hover text-white py-3 px-8 rounded-full font-medium shadow-md transition-transform transform active:scale-95">
+                  Support This Cause
                 </button>
               </div>
-            ))}
-          </Masonry>
+            </motion.div>
+          ))}
         </div>
+        <br />
 
         {/* Modal */}
         {selectedEvent && (
-          <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-            <div className="bg-white rounded-2xl shadow-2xl w-full max-w-lg p-6 relative animate-fadeIn">
+          <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              className="bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto relative"
+            >
               {/* Close Button */}
               <button
-                onClick={() => setSelectedEvent(null)}
-                className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
+                onClick={(e) => { e.stopPropagation(); setSelectedEvent(null); }}
+                className="absolute top-4 right-4 z-10 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center text-gray-600 hover:text-red-500 hover:bg-white shadow transition-all"
               >
                 ✕
               </button>
 
               {/* Event Content */}
-              <img
-                src={selectedEvent.image}
-                alt={selectedEvent.title}
-                className="w-full h-56 object-cover rounded-lg mb-4"
-              />
-              <h4 className="text-2xl font-bold mb-2 text-gray-900">{selectedEvent.title}</h4>
-              <p className="text-sm text-gray-600 mb-1">{selectedEvent.date}</p>
-              <p className="text-sm text-gray-500 italic mb-3"> {selectedEvent.location}</p>
-              <p className="text-base text-gray-700 mb-4">{selectedEvent.description}</p>
-
-              {/* Contact Info with Copy */}
-              <div className="bg-gray-100 p-4 rounded-lg space-y-2">
-                <div className="flex items-center justify-between">
-                  <p className="text-sm text-gray-800 font-medium flex items-center">
-                    <MdPhone className="mx-2 " size={20} /> {selectedEvent.contact.phone}
-                  </p>
-                  <button
-                    onClick={() => handleCopy(selectedEvent.contact.phone, "phone")}
-                    className="text-gray-500 hover:text-green-600"
-                  >
-                    {copied === "phone" ? (
-                      <Check size={18} className="text-green-600" />
-                    ) : (
-                      <ClipboardCopy size={18} />
-                    )}
-                  </button>
-                </div>
-                <div className="flex items-center justify-between pt-4">
-                  <p className="text-sm text-gray-800 font-medium flex items-center">
-                    <MdEmail className="mx-2 " size={20} /> {selectedEvent.contact.email}
-                  </p>
-                  <button
-                    onClick={() => handleCopy(selectedEvent.contact.email, "email")}
-                    className="text-gray-500 hover:text-green-600"
-                  >
-                    {copied === "email" ? (
-                      <Check size={18} className="text-green-600" />
-                    ) : (
-                      <ClipboardCopy size={18} />
-                    )}
-                  </button>
+              <div className="relative h-64 md:h-80 w-full">
+                <img
+                  src={selectedEvent.image}
+                  alt={selectedEvent.title}
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent">
+                  <div className="absolute bottom-6 left-6 text-white">
+                    <h4 className="text-2xl md:text-3xl font-bold shadow-black drop-shadow-md">{selectedEvent.title}</h4>
+                  </div>
                 </div>
               </div>
-            </div>
+
+              <div className="p-6 md:p-8">
+                <p className="text-lg text-primary font-semibold mb-1">{selectedEvent.date}</p>
+                <p className="text-gray-500 italic mb-6 flex items-center">
+                  <span className="mr-2">📍</span> {selectedEvent.location}
+                </p>
+
+                <p className="text-gray-700 text-lg leading-relaxed mb-8">
+                  {selectedEvent.description}
+                </p>
+
+                {/* Contact Info with Copy */}
+                <div className="bg-gray-50 border border-gray-100 p-6 rounded-xl space-y-4">
+                  <h5 className="font-semibold text-gray-900 mb-2">Contact Organizer</h5>
+                  <div className="flex items-center justify-between p-3 bg-white rounded-lg border border-gray-200 shadow-sm">
+                    <p className="text-gray-800 font-medium flex items-center">
+                      <MdPhone className="mr-3 text-primary" size={22} />
+                      <span className="select-all">{selectedEvent.contact.phone}</span>
+                    </p>
+                    <button
+                      onClick={() => handleCopy(selectedEvent.contact.phone, "phone")}
+                      className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                      title="Copy Phone"
+                    >
+                      {copied === "phone" ? (
+                        <Check size={20} className="text-green-600" />
+                      ) : (
+                        <ClipboardCopy size={20} className="text-gray-400 hover:text-primary" />
+                      )}
+                    </button>
+                  </div>
+
+                  <div className="flex items-center justify-between p-3 bg-white rounded-lg border border-gray-200 shadow-sm">
+                    <p className="text-gray-800 font-medium flex items-center truncate">
+                      <MdEmail className="mr-3 text-primary" size={22} />
+                      <span className="select-all truncate">{selectedEvent.contact.email}</span>
+                    </p>
+                    <button
+                      onClick={() => handleCopy(selectedEvent.contact.email, "email")}
+                      className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                      title="Copy Email"
+                    >
+                      {copied === "email" ? (
+                        <Check size={20} className="text-green-600" />
+                      ) : (
+                        <ClipboardCopy size={20} className="text-gray-400 hover:text-primary" />
+                      )}
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         )}
 
         {/* More Button */}
-        <a href={PUBLIC_ROUTES.EVENTS}>
-          <button className="w-72 text-xl py-3 px-6 bg-primary hover:bg-hover text-white font-Raleway rounded-md mt-6">
-            More..
-          </button>
-        </a>
+        <div className="mt-12 text-center">
+          <a href={PUBLIC_ROUTES.EVENTS}>
+            <button className="text-lg py-3 px-10 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold rounded-full transition-all duration-300">
+              View All Events
+            </button>
+          </a>
+        </div>
+
       </div>
       <motion.section
-        {...({} as any)}
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
         viewport={{ once: true }}
-        className=" flex mx-auto px-6 md:px-20 py-20 bg-white"
+        className="w-full bg-gray-50 py-24 px-6 md:px-20 relative overflow-hidden"
       >
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-10">
-          <motion.img
-            {...({} as any)}
-            src="./images/Leader.jpg"
-            alt="Founder - Samuel Afang"
-            className="w-48 h-48 md:w-56 md:h-56 object-cover rounded-full shadow-lg"
-            whileHover={{ scale: 1.05 }}
-          />
+        {/* Background Decoration */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/5 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-100 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3"></div>
+
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-20 md:gap-32 relative z-10">
+
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            className="relative flex-shrink-0"
+          >
+            <div className="absolute inset-0 bg-primary rounded-2xl transform rotate-6 scale-95 opacity-20 transition-transform group-hover:rotate-3"></div>
+            <img
+              src="/images/Leader.jpg"
+              alt="Samuel Afang - Founder"
+              className="w-72 h-80 md:w-80 md:h-96 object-cover rounded-2xl shadow-2xl relative z-10"
+            />
+          </motion.div>
+
           {/* Founder Details */}
-          <div className="text-center md:text-left">
-            <h3 className="text-2xl font-semibold text-gray-800">Samuel Afang</h3>
-            <p className="text-gray-600 mb-4">Founder / Director</p>
-            <p className="text-gray-800 max-w-lg leading-relaxed mb-6">
+          <div className="text-center md:text-left flex-1">
+            <div className="mb-6">
+              <h4 className="text-primary font-bold uppercase tracking-widest text-sm mb-2">Meet the Founder</h4>
+              <h3 className="text-4xl md:text-5xl font-bold text-gray-900 mb-2">Samuel Afang</h3>
+              <p className="text-xl text-gray-500 font-medium">Director & Visionary</p>
+            </div>
+
+            <p className="text-gray-700 text-lg leading-loose mb-8 max-w-2xl mx-auto md:mx-0">
               Samuel Afang is a missionary whose deep conviction to bring hope, support,
-              empowerment, and spiritual growth to crisis-affected communities lead him to
-              found Noach Helping Hands Foundation. His passion for service continues to drive
-              the mission of the foundation.
+              empowerment, and spiritual growth to crisis-affected communities led him to
+              found <span className="font-semibold text-primary">Noach Helping Hands Foundation</span>.
+              His passion for service continues to drive the mission of the foundation, touching lives one community at a time.
             </p>
-            <div className="space-y-2 text-gray-700">
-              <p>
-                <strong>Contact:</strong> +2348145517222, +2349042614572
-              </p>
-              <p>
-                <strong>Email:</strong> afangsamuel@gmail.com
-              </p>
+
+            <div className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-6">
+              <a href="tel:+2348145517222" className="flex items-center space-x-3 bg-white px-6 py-4 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 group">
+                <div className="bg-primary/10 p-2 rounded-full group-hover:bg-primary group-hover:text-white transition-colors">
+                  <MdPhone size={20} className="text-primary group-hover:text-white" />
+                </div>
+                <span className="font-semibold text-gray-800">+234 814 551 7222</span>
+              </a>
+
+              <a href="mailto:afangsamuel@gmail.com" className="flex items-center space-x-3 bg-white px-6 py-4 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-gray-100 group">
+                <div className="bg-primary/10 p-2 rounded-full group-hover:bg-primary group-hover:text-white transition-colors">
+                  <MdEmail size={20} className="text-primary group-hover:text-white" />
+                </div>
+                <span className="font-semibold text-gray-800">afangsamuel@gmail.com</span>
+              </a>
             </div>
           </div>
         </div>
