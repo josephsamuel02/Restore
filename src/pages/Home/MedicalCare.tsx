@@ -30,13 +30,7 @@ const MedicalCare = () => (
           times.
         </p>
 
-        <div className="mt-8 pt-8 border-t border-gray-100 flex flex-col md:flex-row items-center justify-center gap-4 text-sm font-medium text-gray-500">
-          <span className="flex items-center gap-2">🏥 Hospital Support</span>
-          <span className="hidden md:inline">•</span>
-          <span className="flex items-center gap-2">💊 Prescriptions</span>
-          <span className="hidden md:inline">•</span>
-          <span className="flex items-center gap-2">❤️ Essential Care</span>
-        </div>
+
       </motion.div>
     </div>
   </section>
