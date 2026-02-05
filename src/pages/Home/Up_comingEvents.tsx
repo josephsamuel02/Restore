@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useState } from "react";
-import Masonry from "react-masonry-css";
 import { ClipboardCopy, Check } from "lucide-react"; // for icons
 import PUBLIC_ROUTES from "../../utils/PublicRoutes";
 import { MdEmail, MdPhone } from "react-icons/md";
