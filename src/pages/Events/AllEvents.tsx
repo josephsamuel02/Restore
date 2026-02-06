@@ -15,12 +15,12 @@ const AllEvents: React.FC = () => {
 
   const imgRef = useRef<HTMLImageElement | null>(null);
 
-  const eventDate = "June, 2025";
+  const eventDate = "June, 2026";
   const eventLocation = "Bassa, Plateau State, Nigeria";
 
   const upcomingEvent = {
     title: "Outreach & Empowerment Kwal Village",
-    date: "October, 2025",
+    date: "October, 2026",
     location: "Kwal Village, Bassa LGA, Plateau State, Nigeria",
     description:
       "Our objective is to support and empower the community through a comprehensive program that addresses their physical, educational, and spiritual needs.",
