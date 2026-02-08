@@ -15,7 +15,7 @@ const AllEvents: React.FC = () => {
 
   const imgRef = useRef<HTMLImageElement | null>(null);
 
-  const eventDate = "June, 2026";
+  const eventDate = "March, 2026";
   const eventLocation = "Bassa, Plateau State, Nigeria";
 
   const upcomingEvent = {
@@ -46,7 +46,7 @@ const AllEvents: React.FC = () => {
           observer.disconnect();
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.2 },
     );
     if (imgRef.current) observer.observe(imgRef.current);
     return () => observer.disconnect();

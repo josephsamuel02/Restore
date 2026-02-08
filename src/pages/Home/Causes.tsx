@@ -23,7 +23,12 @@ const causes = [
   {
     title: "Skill Acquisition Program",
     text: "Equipping individuals with practical skills and training to enhance their employability, entrepreneurship, and self-sufficiency, empowering them to rebuild their lives and contribute to their communities.",
-    image: "images/30.jpg",
+    image: "images/n1 (2).jpg",
+  },
+  {
+    title: "Education",
+    text: "Contributing to the growth of the communities by supporting and providing resources that enhance eduction.",
+    image: "images/Edu.jpg",
   },
 ];
 
@@ -33,7 +38,7 @@ const Causes: React.FC = () => {
       <h3 className=" text-center text-3xl font-bold my-7 text-black">
         Causes we are serving
       </h3>
-      <div className="w-full h-auto px-4 sm:px-8 lg:px-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="w-full h-auto px-4 sm:px-8 lg:px-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {causes.map((cause, index) => (
           <Card
             key={index}

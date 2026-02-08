@@ -12,7 +12,7 @@ const Up_comingEvents = () => {
   const events = [
     {
       title: "Outreach & Empowerment Kwal Village",
-      date: "October, 2025",
+      date: "March, 2026",
       location: "Kwal Village, Bassa LGA, Plateau State, Nigeria",
       description:
         "Join us to support and empower the community through a comprehensive program that addresses their physical, educational, and spiritual needs.",

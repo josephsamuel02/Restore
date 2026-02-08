@@ -5,7 +5,7 @@ const Events = () => {
   const events = [
     {
       title: "Outreach to Bassa (Plateau State)",
-      // date: "January 1, 2025",
+      // date: "January 1, 2065",
       description:
         "We were able to positively impact the lives of approximately 1,000 community members in various ways",
       image: "/images/20.jpg",
