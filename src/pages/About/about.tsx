@@ -254,6 +254,68 @@ const AboutUs = () => {
           </div>
         </div>
       </motion.section>
+
+      {/* Co-Founders Section */}
+      <section className="bg-gray-50 px-6 md:px-20 py-16">
+        <motion.h2
+          {...({} as any)}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          viewport={{ once: true }}
+          className="text-2xl md:text-3xl font-semibold text-center text-gray-900 mb-12"
+        >
+          Co-Founders
+        </motion.h2>
+
+        <div className="w-1/2  py-20 mx-auto flex flex-col md:flex-row items-center justify-center gap-40">
+          {/* Co-Founder 1 */}
+          <motion.div
+            {...({} as any)}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            viewport={{ once: true }}
+            className="mx-auto flex flex-col items-center md:items-start text-center md:text-left gap-5 flex-1"
+          >
+            <motion.img
+              {...({} as any)}
+              src="./images/d2 (2).jpg"
+              alt="Co-Founder - Meredith Puff Hofmann"
+              className="w-48 h-48 md:w-56 md:h-56 object-cover rounded-full shadow-lg"
+              whileHover={{ scale: 1.05 }}
+            />
+            <div>
+              <h3 className="text-2xl font-semibold text-center md:text-left text-gray-800">
+                Meredith Puff Hofmann
+              </h3>
+              <p className="text-gray-600 text-center md:text-left mb-4">Co-Founder</p>
+            </div>
+          </motion.div>
+
+          {/* Co-Founder 2 */}
+          <motion.div
+            {...({} as any)}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="mx-auto flex flex-col items-center md:items-start text-center md:text-left gap-5 flex-1"
+          >
+            <motion.img
+              {...({} as any)}
+              src="./images/d2 (1).jpg"
+              alt="Co-Founder - Sharon L."
+              className="w-48 h-48 md:w-56 md:h-56 object-cover rounded-full shadow-lg"
+              whileHover={{ scale: 1.05 }}
+            />
+            <div>
+              <h3 className="text-2xl font-semibold text-gray-800">Sharon L.</h3>
+              <p className="text-gray-600 mb-4">Co-Founder</p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
     </div>
   );
 };
