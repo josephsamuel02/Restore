@@ -281,13 +281,13 @@ const AboutUs = () => {
             <motion.img
               {...({} as any)}
               src="./images/d2 (2).jpg"
-              alt="Co-Founder - Meredith Puff Hofmann"
+              alt="Co-Founder - Sharon L."
               className="w-48 h-48 md:w-56 md:h-56 object-cover rounded-full shadow-lg"
               whileHover={{ scale: 1.05 }}
             />
             <div>
               <h3 className="text-2xl font-semibold text-center md:text-left text-gray-800">
-                Meredith Puff Hofmann
+                 Sharon L.
               </h3>
               <p className="text-gray-600 text-center md:text-left mb-4">Co-Founder</p>
             </div>
@@ -305,12 +305,12 @@ const AboutUs = () => {
             <motion.img
               {...({} as any)}
               src="./images/d2 (1).jpg"
-              alt="Co-Founder - Sharon L."
+              alt="Co-Founder - Meredith Puff Hofmann"
               className="w-48 h-48 md:w-56 md:h-56 object-cover rounded-full shadow-lg"
               whileHover={{ scale: 1.05 }}
             />
             <div>
-              <h3 className="text-2xl font-semibold text-gray-800">Sharon L.</h3>
+              <h3 className="text-2xl font-semibold text-gray-800">Meredith Puff Hofmann.</h3>
               <p className="text-gray-600 mb-4">Co-Founder</p>
             </div>
           </motion.div>
